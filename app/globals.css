@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.mainFrame {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  @apply flex flex-col items-center justify-center min-h-screen py-2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navButton {
+  @apply text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card {
+  @apply bg-gray-300 
+      shadow-sm
+      flex 
+      justify-around
+      rounded-md 
+      py-3 px-4 my-4 
+      relative 
+      w-96
+      overflow-hidden;
+}
+
+.employeeCard {
+  @apply w-full max-w-sm bg-white border border-gray-200 rounded-xl shadow;
+}
+
+.profileImg {
+  @apply h-24 w-24 mb-3 rounded-full shadow-lg;
+}
+
+.emplyeeBtn {
+  @apply inline-flex w-24 mr-3 justify-center items-center px-4 py-2 text-sm font-medium text-center text-white bg-gray-900 rounded-lg hover:bg-gray-700;
 }
